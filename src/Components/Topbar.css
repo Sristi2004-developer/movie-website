@@ -1,0 +1,106 @@
+header{
+  top:0;
+  z-index: 10;
+  padding:8px 2%;
+  justify-content: space-between;
+  background: #ffffffbd;
+  position:sticky;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  
+}
+.header-left .menu-icon{
+  width: 22px;
+  margin-right: 25px;
+
+}
+.header-left .logo{
+  width: 22px;
+  
+}
+
+.header-middle .search-box{
+  padding: 10px 12px;
+  margin-right: 350px;
+  border: 2px solid rgb(200, 166, 166);
+  border-radius: 20px;
+  
+}
+.header-middle .search-box input{
+  border: none;
+  outline: none;
+  width: 500px;
+  background:transparent;
+}
+.header-right .user-icon{
+  width: 23px;
+ 
+}
+.header-right .more-icon{
+  width:25px;
+  margin-right: 22px;
+}
+.header-right .notification-icon{
+  width:25px;
+  margin-right: 22px;
+}
+/* .header-right img{
+  margin-right: 22px;
+} */
+ .header-right .caret-icon{
+  margin-right: 10px;
+  width: 22px;
+}
+.header-right .user-icon{
+  position: relative;
+  cursor: pointer;
+}
+
+/* .header-right .dropdown{
+  text-decoration: underline;
+  position: absolute;
+  display: none;
+}
+.user-icon :hover .dropdown{
+  display:block;
+} */
+ 
+.header-profile{
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+.flex-div .dropdown{
+  position:absolute;
+  top: 100%;
+  right:0;
+  z-index:1;
+  text-decoration:underline;
+  margin-right: 30px;
+
+  
+}
+.header-right .dropdown p{
+  font-size:12px;
+  cursor: pointer;
+}
+
+/* .dropdown ul{
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.5)
+}
+.dropdown ul:hover text{
+  color:red;
+  cursor:pointer;
+} */
+ .dropdown.active{
+  opacity: 1;
+  visibility: visible;
+  transform : translateY(0);
+  transition : var(--speed) ease;
+ }
+ .dropdown.inactive{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+ }
