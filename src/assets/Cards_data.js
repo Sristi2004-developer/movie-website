@@ -15,60 +15,60 @@ import card_img14 from './card14.jpg';
 
 const cards_data = [
     {
-        image:card_img1,
-        name:"Kung Fu Panda"
+        Poster:card_img1,
+        Title:"Kung Fu Panda"
     },
     {
-        image:card_img2,
-        name:"Squid Game"
+        Poster:card_img2,
+        Title:"Squid Game"
     },
     {
-        image:card_img3,
-        name:"Squid Challange"
+        Poster:card_img3,
+        Title:"Squid Challange"
     },
     {
-        image:card_img4,
-        name:"Jawan"
+        Poster:card_img4,
+        Title:"Jawan"
     },
     {
-        image:card_img5,
-        name:"The Ghost"
+        Poster:card_img5,
+        Title:"The Ghost"
     },
     {
-        image:card_img6,
-        name:"Lucifer"
+        Poster:card_img6,
+        Title:"Lucifer"
     },
     {
-        image:card_img7,
-        name:"The Railway MEN"
+        Poster:card_img7,
+        Title:"The Railway MEN"
     },
     {
-        image:card_img8,
-        name:"Young Sheldon"
+        Poster:card_img8,
+        Title:"Young Sheldon"
     },
     {
-        image:card_img9,
-        name:"Sacred Games"
+        Poster:card_img9,
+        Title:"Sacred Games"
     },
     {
-        image:card_img10,
-        name:"Adipurush"
+        Poster:card_img10,
+        Title:"Adipurush"
     },
     {
-        image:card_img11,
-        name:"Sukhee"
+        Poster:card_img11,
+        Title:"Sukhee"
     },
     {
-        image:card_img12,
-        name:"Mission Ganj"
+        Poster:card_img12,
+        Title:"Mission Ganj"
     },
     {
-        image:card_img13,
-        name:"Leo"
+        Poster:card_img13,
+        Title:"Leo"
     },
     {
-        image:card_img14,
-        name:"All of Us Are Dead"
+        Poster:card_img14,
+        Title:"All of Us Are Dead"
     },
 ]
 

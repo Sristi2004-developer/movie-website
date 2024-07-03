@@ -7,6 +7,7 @@ header{
   position:sticky;
   box-shadow: 0 0 12px rgba(0,0,0,0.3);
   
+  
 }
 .header-left .menu-icon{
   width: 22px;
@@ -18,19 +19,7 @@ header{
   
 }
 
-.header-middle .search-box{
-  padding: 10px 12px;
-  margin-right: 350px;
-  border: 2px solid rgb(200, 166, 166);
-  border-radius: 20px;
-  
-}
-.header-middle .search-box input{
-  border: none;
-  outline: none;
-  width: 500px;
-  background:transparent;
-}
+
 .header-right .user-icon{
   width: 23px;
  

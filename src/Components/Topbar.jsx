@@ -2,15 +2,20 @@ import React, {useState} from 'react'
 import './Topbar.css'
 import menu_icon from '../assets/menu.png'
 import logo from '../assets/movie-clapper-open.png'
-import search_logo from '../assets/search.png'
+
 import more_icon from '../assets/more.png'
 import notification_icon  from '../assets/notification.png'
 import profile_icon from '../assets/profile-user.png'
-import caret_icon from '../assets/sort-down.png'
+import caret_icon from '../assets/caret-down.png'
 
 
 
 const Topbar = ({setSidemenu}) => {
+
+ 
+  
+  
+  
 
   const [open,setOpen] = useState(false);
   return (
@@ -22,11 +27,8 @@ const Topbar = ({setSidemenu}) => {
         </div>
         
 
-        <div className='header-middle flex-div'>
-          <div className='search-box flex-div'>
-          <input type="text"placeholder='search'/>
-          <img src={search_logo} alt=""/>
-          </div>
+        
+  
 
         <div className='header-right flex-div'>
           
@@ -44,7 +46,7 @@ const Topbar = ({setSidemenu}) => {
         </div>
         
 
-      </div>
+      
 
       
     </header>
