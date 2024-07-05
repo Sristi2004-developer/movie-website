@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './Topbar.css'
-import menu_icon from '../assets/menu.png'
+// import menu_icon from '../assets/menu.png'
 import logo from '../assets/movie-clapper-open.png'
 
 import more_icon from '../assets/more.png'
@@ -10,7 +10,7 @@ import caret_icon from '../assets/caret-down.png'
 
 
 
-const Topbar = ({setSidemenu}) => {
+const Topbar = () => {
 
  
   
@@ -21,7 +21,7 @@ const Topbar = ({setSidemenu}) => {
   return (
     <header className='flex-div'>
       <div className=' header-left flex-div'>
-        <img className='menu-icon' onClick={()=>setSidemenu(prev=>prev===false?true:false)} src={menu_icon} alt=""/>
+       
         <img className='logo'src={logo} alt=""/>
         <h2>MOVIE BINGE</h2>
         </div>

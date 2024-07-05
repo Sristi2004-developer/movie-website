@@ -1,9 +1,9 @@
 import React from 'react'
 import './Home.css'
-import Sidemenu from '../Components/Sidemenu'
 
 
-const Home = ({sidemenu}) => {
+
+const Home = () => {
 
 
 
@@ -14,7 +14,7 @@ const Home = ({sidemenu}) => {
     
 
 
-    <Sidemenu sidemenu={sidemenu}/>
+  
   
     
     </>
