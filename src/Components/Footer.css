@@ -1,13 +1,17 @@
-.footer{
-  margin-top: 20rem;
-
-  width:85%;
-  margin-left: 200px;
+/* .footer{
+  
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+ 
+ 
+  
 
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+
 }
 .footer-icons{
   max-width: 1240px;
@@ -42,4 +46,4 @@ h5{
   width: 30px;
   background-color:black;
   cursor:pointer;
-}
+} */

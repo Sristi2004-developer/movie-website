@@ -3,17 +3,20 @@ import Topbar from './Components/Topbar'
 import { Route ,Routes} from 'react-router-dom'
 import Home from './Pages/Home'
 import Video from './Pages/Video'
-import Footer from './Components/Footer'
+// import Footer from './Components/Footer'
 import Content from './Components/Content'
 import Moviedetails from './Components/Moviedetails'
+
+
 
 
 const App = () => {
 
   // const [sidemenu,setSidemenu] = useState(false);
   return (
-    
-    <div>
+   
+       <div >
+      
       <Topbar />
       <Routes>
         <Route path='/' element ={<Home  />} />
@@ -22,11 +25,17 @@ const App = () => {
         <Route path= "/movie/:id" element={<Moviedetails />} />
       </Routes>
       <Content/>
+      
+      
 
-      <Footer/>
+    
+      </div>
+    
+      
+     
       
       
-    </div>
+    
   
   )
 }

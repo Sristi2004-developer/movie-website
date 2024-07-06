@@ -36,11 +36,18 @@ const Moviedetails = () => {
   }
   return (
     <div className='movie-details' ref={detailsRef}>
-      <h2>{movie.Title}</h2>
+      
       {movie.Poster && <img src={movie.Poster} alt="" /> }
       
       <ul>
-        <li><strong>Year:</strong>{movie.Year}
+      <li><strong>Title:</strong>{movie.Title}
+      </li>
+      <li><strong>Genre:</strong>{movie.Genre}
+
+        </li>
+
+      
+        <li><strong>Plot:</strong>{movie.Plot}
 
         </li>
 
@@ -49,9 +56,8 @@ const Moviedetails = () => {
 
         </li>
 
-        <li><strong>Rated:</strong>{movie.Rated}
+        
 
-        </li>
       </ul>
       
     </div>

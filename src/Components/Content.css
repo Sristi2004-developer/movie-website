@@ -1,7 +1,20 @@
 .content{
-  background-color: rgb(2, 2, 40);
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
   
-  height: 100vh;
+  min-height: 100vh;
+
+  
+  
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  padding: 20px; 
+
 }
 .header-middle form{
   padding: 10px 12px;
@@ -29,34 +42,47 @@
 .card{
   border: 1px solid white;
   border-radius: 9px;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s;
+  height: 350px;
  
 }
 .card:hover{
   transform: translateY(-10px);
 }
 .card-img{
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 300px;
+  /* height: auto; */
 }
 /* .card-body{
   padding: 16px;
 } */
  .card-title{
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0 0 10px;
+  color:white;
+ }
+ .card-text{
+  color: white;
  }
 .container{
-  display: grid;
+  
+  /* display: grid;
   grid-template-columns: repeat(5,1fr);
-  grid-template-rows: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  
 
   gap: 15px;
-  
+/*   
   padding: 15px;
-  gap: 15px;
+  */
   /* margin-top: 1rem;
   margin-bottom: 1rem;
   

@@ -90,17 +90,7 @@ const Content = () => {
               )
             })
           }
-            
-
-            
-
-           
-
-                  
-        
           
-          
-
         <Moviedetails/>
 
       </div>
