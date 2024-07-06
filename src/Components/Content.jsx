@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
 import './Content.css'
-import axios from 'axios'
+// import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Moviedetails from './Moviedetails'
 // import Moviedetails from './Moviedetails'
@@ -21,27 +21,45 @@ const Content = () => {
   setText(event.target.value)
 
   }
-  const getMovie =(e)=>{
+  const getMovie = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
+  
 
-    axios.get(`http://www.omdbapi.com/?s=${text}&apikey=d62fac6b`)
-    .then((response)=>{
-      console.log(response);
-      setMovie(response.data.Search)
-    })
+    // axios.get(`http://www.omdbapi.com/?s=${text}&apikey=d62fac6b`)
+    // .then((response)=>{
+    //   console.log(response);
+    //   setMovie(response.data.Search)
+    // })
 
-    .catch((error) =>{
-      console.error('Error fetching movies:',error);
-      setError('Error fetching movies.Kindly try again.')
-    })
-    .finally(()=>{
-      setLoading(null);
+    // .catch((error) =>{
+    //   console.error('Error fetching movies:',error);
+    //   setError('Error fetching movies.Kindly try again.')
+    // })
+    // .finally(()=>{
+    //   setLoading(null);
     
-    });
+    // });
 
-  }
+    try{
+      const response =await fetch(`http://www.omdbapi.com/?s=${text}&apikey=d62fac6b`);
+      const data = await response.json();
+      console.log(data);
+      if(data.Response === 'True'){
+        setMovie(data.Search);
+      }else {
+        setError('Error fetching movies.Kindly try again')
+      }
+    }catch(error){
+      console.error('Error fetching movies:',error);
+      setError('Error fetching movies.Kindly try again')
+    } finally{
+      setLoading(null);
+    }
+  };
+
+  
   const handlePosterClick = (id) =>{
    
     navigate(`/movie/${id}`);

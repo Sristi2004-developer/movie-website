@@ -1,6 +1,6 @@
 import React ,{useEffect, useState,useRef} from 'react'
 import {useParams}  from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 import './Moviedetails.css'
 
 const Moviedetails = () => {
@@ -13,13 +13,14 @@ const Moviedetails = () => {
   useEffect(() =>{
     const fetchMovieDetails = async() =>{
       try{
-        const response =await axios.get(`http://www.omdbapi.com/?i=${id}&apikey=d62fac6b`)
-        console.log(response.data);
-        setMovie(response.data);
+        const response =await fetch(`http://www.omdbapi.com/?i=${id}&apikey=d62fac6b`);
+        const data =await response.json();
+        console.log(data);
+        setMovie(data);
       }catch (error){
-        console.error(`Error fetching movie details:`,error);
+        console.error('Error fetching movie details:',error);
       }
-    }
+    };
     fetchMovieDetails();
   },[id]);
 
