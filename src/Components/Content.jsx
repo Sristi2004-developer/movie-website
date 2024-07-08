@@ -25,25 +25,9 @@ const Content = () => {
     e.preventDefault();
     setLoading(true);
     setError(null);
-  
-
-    // axios.get(`http://www.omdbapi.com/?s=${text}&apikey=d62fac6b`)
-    // .then((response)=>{
-    //   console.log(response);
-    //   setMovie(response.data.Search)
-    // })
-
-    // .catch((error) =>{
-    //   console.error('Error fetching movies:',error);
-    //   setError('Error fetching movies.Kindly try again.')
-    // })
-    // .finally(()=>{
-    //   setLoading(null);
-    
-    // });
 
     try{
-      const response =await fetch(`http://www.omdbapi.com/?s=${text}&apikey=d62fac6b`);
+      const response =await fetch(`https://www.omdbapi.com/?s=${text}&apikey=d62fac6b`)
       const data = await response.json();
       console.log(data);
       if(data.Response === 'True'){
@@ -57,7 +41,39 @@ const Content = () => {
     } finally{
       setLoading(null);
     }
-  };
+    
+
+
+
+  }
+    
+
+
+    
+      // Await fetch(`http://www.omdbapi.com/?s=${text}&apikey=d62fac6b`);
+      // const data = await response.json();
+      // .then(response =>
+      //   response.json())
+      //   .then(data =>{
+      //     console.log(data);
+          // if(data.Response === 'True'){
+          //   setMovie(data.Search);
+          // }else {
+          //   setError('Error fetching movies.Kindly try again')
+          // }
+
+        
+
+
+        // })
+  // .catch(error=>{
+  //     console.error('Error fetching movies:',error);
+  //     setError('Error fetching movies.Kindly try again')
+  //   } )
+  // } finally{
+  //     setLoading(null);
+  //   }
+  // };
 
   
   const handlePosterClick = (id) =>{
