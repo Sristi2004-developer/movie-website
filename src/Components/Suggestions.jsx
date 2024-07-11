@@ -39,7 +39,7 @@ const Suggestions = () => {
             try {
                 const movieDetails = await Promise.all(
                     oscarWinningMovies.map(async (movie) => {
-                        const response = await fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=d62fac6b`);
+                        const response = await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=d62fac6b`);
                         return response.json();
                     })
                 );
