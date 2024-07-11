@@ -1,27 +1,27 @@
 header{
   top:0;
   z-index: 8;
-  padding:8px 2%;
+  padding:0.5em 2%;
   justify-content: space-between;
   background: #ffffffbd;
   /* position:sticky; */
-  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  box-shadow: 0 0 1.2em rgba(0,0,0,0.3);
   
   
 }
 .header-left .menu-icon{
-  width: 22px;
-  margin-right: 25px;
+  width: 1.5em;
+  margin-right: 1.5em;
 
 }
 .header-left .logo{
-  width: 22px;
+  width: 1.5em;
   
 }
 
 
 .header-right .user-icon{
-  width: 23px;
+  width: 1.6em;
  
 }
 .header-right .more-icon{
@@ -29,15 +29,15 @@ header{
   margin-right: 22px;
 }
 .header-right .notification-icon{
-  width:25px;
-  margin-right: 22px;
+  width:1.6em;
+  margin-right: 1.5em;
 }
 /* .header-right img{
   margin-right: 22px;
 } */
  .header-right .caret-icon{
-  margin-right: 10px;
-  width: 22px;
+  margin-right: 0.6em;
+  width: 1.5em;
 }
 .header-right .user-icon{
   position: relative;
@@ -64,12 +64,12 @@ header{
   right:0;
   z-index:1;
   text-decoration:underline;
-  margin-right: 30px;
+  margin-right: 2em;
 
   
 }
 .header-right .dropdown p{
-  font-size:12px;
+  font-size:0.75em;
   cursor: pointer;
 }
 

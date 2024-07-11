@@ -4,6 +4,7 @@ import './Content.css'
 import { useNavigate } from 'react-router-dom'
 import Moviedetails from './Moviedetails'
 // import Moviedetails from './Moviedetails'
+import select_png from '../assets/select.png'
 
 
 
@@ -12,7 +13,7 @@ const Content = () => {
   const [text,setText]= useState("")
 
   const [movie,setMovie]= useState([])
-  const [loading, setLoading]= useState(null);
+  
   const [error,setError]= useState(null);
   const navigate = useNavigate()
   
@@ -23,13 +24,13 @@ const Content = () => {
   }
   const getMovie = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    
     setError(null);
 
     try{
       const response =await fetch(`https://www.omdbapi.com/?s=${text}&apikey=d62fac6b`)
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if(data.Response === 'True'){
         setMovie(data.Search);
       }else {
@@ -38,9 +39,8 @@ const Content = () => {
     }catch(error){
       console.error('Error fetching movies:',error);
       setError('Error fetching movies.Kindly try again')
-    } finally{
-      setLoading(null);
-    }
+     }
+    
     
 
 
@@ -97,33 +97,36 @@ const Content = () => {
           
           <div className='container'>
             
-                {loading && <p>Loading..</p>}
-            {error && <p> {error} </p>}
-            {!loading && !error && movie.length ===0 && <p>No movies found</p>}
-            
+             { movie.map((value) =>(
 
-
-
-          {
-            movie.map((value) =>{
-              return(
-                
-                   <div key={value.imdbID} className='card' onClick={()=>
-                    handlePosterClick(value.imdbID) }>
-                  <img src={value.Poster} className='card-img' alt="" />
-                  <div className='card-body'>
-                  <h4 className='card-title'>{value.Year}</h4>
-                  <h5 className='card-text'>{value.Title} </h5>
+             
+               
                   
+                     <div key={value.imdbID} className='card' onClick={()=>
+                      handlePosterClick(value.imdbID) }>
+  
+                        <img src={value.Poster} className='card-img' alt="" />
+  
+                    
+                    <div className='card-body'>
+                    <h4 className='card-title'>{value.Year}</h4>
+                    <h5 className='card-text'>{value.Title} </h5>
+                    </div>
+                    <div className='icon'>
+                      <img src={select_png} className='tap' alt=""/>
+                    </div>
+  
+                    </div>
+  
+                  
+                ))}
 
-                  </div>
+            
+            
+              
 
-                  </div>
-
-                
-              )
-            })
-          }
+          
+            
           
         <Moviedetails/>
 

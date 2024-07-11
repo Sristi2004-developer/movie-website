@@ -51,11 +51,16 @@ const Moviedetails = () => {
         <li><strong>Plot:</strong>{movie.Plot}
 
         </li>
+        
 
 
-        <li><strong>IMDb Rating:</strong>{movie.imdbRating}
+        <li><strong>Actors:</strong>{movie.Actors}
 
         </li>
+        <li><strong>IMDB Rating:</strong>{movie.imdbRating}
+
+</li>
+
 
         
 

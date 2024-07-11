@@ -10,7 +10,8 @@ import caret_icon from '../assets/caret-down.png'
 
 
 
-const Topbar = () => {
+const Topbar = ({scrollToSuggestions}) => {
+  
 
  
   
@@ -32,7 +33,7 @@ const Topbar = () => {
 
         <div className='header-right flex-div'>
           
-          <img src={more_icon} className='more-icon' alt=""/>
+        <button onClick={scrollToSuggestions}>Suggestions</button>
           <img src={notification_icon} className='notification-icon' alt=""/>
           <div className='header-profile'onClick={()=>{setOpen(!open)}}>
           <img src={profile_icon} className='user-icon' alt=""/>
