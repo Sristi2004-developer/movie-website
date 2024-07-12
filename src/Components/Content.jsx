@@ -4,7 +4,9 @@ import './Content.css'
 import { useNavigate } from 'react-router-dom'
 import Moviedetails from './Moviedetails'
 // import Moviedetails from './Moviedetails'
-import select_png from '../assets/select.png'
+// import select_png from '../assets/select.png'
+import PaymentModal from './PaymentModal'
+import buy_icon from '../assets/shopping-bag.png'
 
 
 
@@ -16,6 +18,8 @@ const Content = () => {
   
   const [error,setError]= useState(null);
   const navigate = useNavigate()
+  const [modalIsOpen,setModalIsOpen]=useState(false);
+  
   
 
   const changeText=(event)=>{
@@ -41,10 +45,6 @@ const Content = () => {
       setError('Error fetching movies.Kindly try again')
      }
     
-    
-
-
-
   }
     
 
@@ -80,6 +80,12 @@ const Content = () => {
    
     navigate(`/movie/${id}`);
   }
+  const openModal=()=>{
+    setModalIsOpen(true)
+  }
+  const closeModal=()=>{
+    setModalIsOpen(false)
+  }
   
   
   return (
@@ -111,18 +117,26 @@ const Content = () => {
                     <div className='card-body'>
                     <h4 className='card-title'>{value.Year}</h4>
                     <h5 className='card-text'>{value.Title} </h5>
+                    <button className='subscribe'  onClick={openModal}>
+                    <span className='btn-text'>Subscribe</span>
+                      <img src={buy_icon} alt="" className='btn-image'/>
+                    
+                     </button>
                     </div>
                     <div className='icon'>
-                      <img src={select_png} className='tap' alt=""/>
+                     
+                      <p>Click to view</p>
+                      
                     </div>
+                   
   
                     </div>
   
                   
                 ))}
 
-            
-            
+            {modalIsOpen && 
+            <PaymentModal isOpen ={modalIsOpen} onRequestClose={closeModal}/>}
               
 
           

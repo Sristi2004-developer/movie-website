@@ -10,7 +10,7 @@ import caret_icon from '../assets/caret-down.png'
 
 
 
-const Topbar = ({scrollToSuggestions}) => {
+const Topbar = ({scrollToSuggestions,handleOpenModal}) => {
   
 
  
@@ -35,15 +35,12 @@ const Topbar = ({scrollToSuggestions}) => {
           
         <button onClick={scrollToSuggestions}>Suggestions</button>
           <img src={notification_icon} className='notification-icon' alt=""/>
-          <div className='header-profile'onClick={()=>{setOpen(!open)}}>
+          <div className='header-profile'onClick={handleOpenModal}>
           <img src={profile_icon} className='user-icon' alt=""/>
           <img src={caret_icon} className='caret-icon' alt=""/>
 
           </div>
-          <div className={`dropdown ${open? 'active' : 'inactive'}`}>
-            <p>Sign Out</p>
-          </div>
-
+          
         </div>
         
 

@@ -13,6 +13,7 @@ import Suggestions from './Components/Suggestions'
 
 const App = () => {
   const [showSuggestions,setShowSuggestions]=useState(false);
+  
   const suggestionsRef=useRef(null);
   const scrollToSuggestions=() =>{
     setShowSuggestions(true)
@@ -20,18 +21,23 @@ const App = () => {
   }
  
 
+ 
+
   // const [sidemenu,setSidemenu] = useState(false);
   return (
    
        <div >
       
-      <Topbar scrollToSuggestions={scrollToSuggestions}/>
+      <Topbar scrollToSuggestions={scrollToSuggestions} />
       
       <Routes>
         <Route path='/' element ={<Home  />} />
+        
+
         <Route path='/video/:categoryId/:videoId' element={<Video/>} />
         <Route path="/movies" element={<Content/>} />
         <Route path= "/movie/:id" element={<Moviedetails />} />
+        
         
       </Routes>
       <Content/>
@@ -39,6 +45,7 @@ const App = () => {
         {showSuggestions && <Suggestions/>}
         
       </div>
+      
       
       </div>
          

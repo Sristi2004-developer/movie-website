@@ -53,7 +53,8 @@
   /* overflow: hidden; */
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s;
-  height: 57vh;
+  height: 55vh;
+  margin-top: 25px;
  
 }
 .card:hover{
@@ -78,6 +79,10 @@
  .card-text{
   color: white;
  }
+ .card button{
+  margin-left: 160px;
+ }
+ 
 .container{
   
   /* display: grid;
@@ -109,3 +114,9 @@
   width:1.4em;
   height: 1.4em;
  }
+ .btn-image{
+  width: 1.1em;
+  
+  
+ }
+ 

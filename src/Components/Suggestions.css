@@ -21,6 +21,12 @@
 
 
 }
+.suggestions-container h2{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .suggestions-image{
   width: 100%;
   height: 46vh;
@@ -29,6 +35,7 @@
   border-top-right-radius: 9px;
 }
 .suggestions-container ul li{
+  margin-top: 20px;
   border: 1px solid white;
   border-radius: 9px;
   /* overflow: hidden; */

@@ -4,8 +4,10 @@ header{
   padding:0.5em 2%;
   justify-content: space-between;
   background: #ffffffbd;
-  /* position:sticky; */
+  position:sticky;
   box-shadow: 0 0 1.2em rgba(0,0,0,0.3);
+  background-image:url("../assets/Broken Hearts.jpg")
+
   
   
 }
