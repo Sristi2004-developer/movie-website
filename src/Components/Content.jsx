@@ -94,7 +94,7 @@ const Content = () => {
       <div className='header-middle flex-div'>
           <form className='search-box flex-div' onSubmit={getMovie} >
           <input type="text"placeholder='search' value ={text} onChange={changeText} />
-          <button className='btn-form' type="submit" >Search</button>
+          <button className='btn-form' type="submit" >Enter</button>
           </form>
         </div>
 

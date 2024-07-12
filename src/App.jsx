@@ -11,15 +11,17 @@ import Suggestions from './Components/Suggestions'
 
 
 
+
 const App = () => {
   const [showSuggestions,setShowSuggestions]=useState(false);
   
   const suggestionsRef=useRef(null);
+  
   const scrollToSuggestions=() =>{
     setShowSuggestions(true)
     suggestionsRef.current.scrollIntoView({behaviour:'smooth'})
   }
- 
+  
 
  
 
@@ -29,6 +31,7 @@ const App = () => {
        <div >
       
       <Topbar scrollToSuggestions={scrollToSuggestions} />
+     
       
       <Routes>
         <Route path='/' element ={<Home  />} />
@@ -37,7 +40,6 @@ const App = () => {
         <Route path='/video/:categoryId/:videoId' element={<Video/>} />
         <Route path="/movies" element={<Content/>} />
         <Route path= "/movie/:id" element={<Moviedetails />} />
-        
         
       </Routes>
       <Content/>
